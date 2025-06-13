@@ -13,7 +13,7 @@ type Config struct {
 
 func New() *Config {
 	return &Config{
-		DatabaseURL: getEnv("DATABASE_URL", "postgres://postgres:Neha@1234@localhost/hospital_db?sslmode=disable"),
+		DatabaseURL: getEnv("DATABASE_URL", "postgres://postgres:password@localhost/hospital_db?sslmode=disable"),
 		JWTSecret:   getEnv("JWT_SECRET", "your-super-secret-jwt-key"),
 		Port:        getEnv("PORT", "8080"),
 		Environment: getEnv("ENVIRONMENT", "development"),
